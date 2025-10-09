@@ -52,7 +52,7 @@ elseif($_SERVER["REQUEST_METHOD"] == "GET") {
 
 <h1>My first PHP page</h1>
 
-<form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+<form enctype="multipart/form-data" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
   <?php
 
   if(isset($update)) {
@@ -66,6 +66,7 @@ elseif($_SERVER["REQUEST_METHOD"] == "GET") {
   Brand: <input type="text" name="brand">
   Stock: <input type="text" name="stock">
   Sold: <input type="text" name="sold">
+  File: <input type="file" name="image">
     <?php
   }
 ?>
